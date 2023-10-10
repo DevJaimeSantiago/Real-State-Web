@@ -4,7 +4,7 @@ import Hero from "./Components/Hero";
 const App = () => {
 	return (
 		<>
-			<Hero />
+		<Hero />
 		</>
 	);
 };
