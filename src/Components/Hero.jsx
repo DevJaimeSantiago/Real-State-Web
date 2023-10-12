@@ -70,8 +70,12 @@ const Hero = () => {
 							heroBtn={true}
 						/>
 					</Box>
-					<Box sx={{flex: "1.25"}}>
-						<img src={heroImg} alt="heroImg" style={{maxWidth: "100%", marginBottom: "2rem"}} />
+					<Box sx={{ flex: "1.25" }}>
+						<img
+							src={heroImg}
+							alt="heroImg"
+							style={{ maxWidth: "100%", marginBottom: "2rem" }}
+						/>
 					</Box>
 				</CustomBox>
 			</Container>
