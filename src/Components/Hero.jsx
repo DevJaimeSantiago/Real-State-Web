@@ -50,11 +50,9 @@ const Hero = () => {
 							Welcome to Besnik Agency
 						</Typography>
 
-						<Typography>
-							<Title variant="h1">
-								Discover a place where you'll love to live.
-							</Title>
-						</Typography>
+						<Title variant="h1">
+							Discover a place where you'll love to live.
+						</Title>
 
 						<Typography
 							variant="body2"
