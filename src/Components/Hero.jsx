@@ -1,5 +1,6 @@
 // Components
 import Navbar from "./Navbar";
+import CustomButton from "./CustomButton";
 
 // Components - Material UI
 import { Box, Typography, styled } from "@mui/material";
@@ -62,6 +63,15 @@ const Hero = () => {
 							Be the first to get the best real state deals before they hit the
 							mass market! Hot foreclosure deals with one simple search!
 						</Typography>
+						<CustomButton
+							backgroundColor="#0F184C"
+							color="#fff"
+							buttonText="More About us"
+							heroBtn={true}
+						/>
+					</Box>
+					<Box sx={{flex: "1.25"}}>
+						<img src={heroImg} alt="heroImg" style={{maxWidth: "100%", marginBottom: "2rem"}} />
 					</Box>
 				</CustomBox>
 			</Container>
