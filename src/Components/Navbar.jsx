@@ -1,4 +1,5 @@
 // Components
+import CustomButton from "./CustomButton";
 
 // Components - Material UI
 import { Box, Typography, styled } from "@mui/material";
@@ -73,7 +74,36 @@ const Navbar = () => {
 			>
 				<Box sx={{ display: "flex", alignItems: "center" }}>
 					<CustomMenuIcon />
+
+					<NavbarLogo
+						src={logoImg}
+						alt="logo"
+					/>
 				</Box>
+
+				<NavbarLinksBox>
+					<NavLink variant="body2">Home</NavLink>
+					<NavLink variant="body2">Features</NavLink>
+					<NavLink variant="body2">Services</NavLink>
+					<NavLink variant="body2">Listed</NavLink>
+					<NavLink variant="body2">Contact</NavLink>
+				</NavbarLinksBox>
+			</Box>
+
+			<Box
+				sx={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+					gap: "1rem",
+				}}
+			>
+				<NavLink variant="body2">Sign Up</NavLink>
+				<CustomButton
+					backgroundColor="#0F1B4C"
+					color="#fff"
+					buttonText="Register"
+				/>
 			</Box>
 		</NavbarContainer>
 	);
