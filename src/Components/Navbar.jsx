@@ -1,8 +1,20 @@
+import { useState } from "react";
+
 // Components
 import CustomButton from "./CustomButton";
 
 // Components - Material UI
-import { Box, Typography, styled } from "@mui/material";
+import {
+	Box,
+	Drawer,
+	List,
+	ListItem,
+	ListItemButton,
+	ListItemIcon,
+	ListItemText,
+	Typography,
+	styled,
+} from "@mui/material";
 import { Container } from "@mui/system";
 
 // Material Icons - Material UI
@@ -17,6 +29,51 @@ import ContactsIcon from "@mui/icons-material/Contacts";
 import logoImg from "../media/logo.png";
 
 const Navbar = () => {
+	const [mobileMenu, setMobileMenu] = useState({
+		left: false,
+	});
+
+	const toggleDrawer = (anchor, open) => (event) => {
+		if (
+			event.type === " keydown" &&
+			(event.type === "Tab" || event.type === "shift")
+		) {
+			return;
+		}
+		setMobileMenu({ ...mobileMenu, [anchor]: open });
+	};
+
+	const list = (anchor) => (
+		<Box
+			sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+			role="presentation"
+			onClick={toggleDrawer(anchor, false)}
+			onKeyDown={toggleDrawer(anchor, false)}
+		>
+			<List>
+				{["Home", "features", "Services", "Listed", "Contact"].map(
+					(text, index) => (
+						<ListItem
+							key={text}
+							disablePadding
+						>
+							<ListItemButton>
+								<ListItemIcon>
+									{index === 0 && <HomeIcon />}
+									{index === 1 && <FeaturedPlayListIcon />}
+									{index === 2 && <MiscellaneousServicesIcon />}
+									{index === 3 && <ListAltIcon />}
+									{index === 4 && <ContactsIcon />}
+								</ListItemIcon>
+								<ListItemText primary={text} />
+							</ListItemButton>
+						</ListItem>
+					)
+				)}
+			</List>
+		</Box>
+	);
+
 	const NavLink = styled(Typography)(({ theme }) => ({
 		fontSize: "14px",
 		color: "#4F5361",
@@ -73,8 +130,14 @@ const Navbar = () => {
 				}}
 			>
 				<Box sx={{ display: "flex", alignItems: "center" }}>
-					<CustomMenuIcon />
-
+					<CustomMenuIcon onClick={toggleDrawer("left", true)} />
+					<Drawer
+						anchor="left"
+						open={mobileMenu["left"]}
+						onClose={toggleDrawer("left", false)}
+					>
+						{list("left")}
+					</Drawer>
 					<NavbarLogo
 						src={logoImg}
 						alt="logo"
