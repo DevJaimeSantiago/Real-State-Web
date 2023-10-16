@@ -34,7 +34,7 @@ const Properties = () => {
 					<Typography sx={{ color: "#5S6473", fontSize: "16px", mt: 1 }}>
 						Everything you need to know when looking for a new home!
 					</Typography>
-				</PropertiesTextBox>
+				</PropertiesTextBox> 
 
 				<PropertiesBox>
 					{properties.map((property) => (

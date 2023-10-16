@@ -1,7 +1,7 @@
 // Components - Material UI
 import { Box, Typography, styled } from "@mui/material";
 
-// Icons - Images
+// Icons - Images 
 import bedroomsIcon from "../media/bedroomsIcon.png";
 import bathroomsIcon from "../media/bathroomsIcon.png";
 import spaceIcon from "../media/spaceIcon.png";
