@@ -1,7 +1,10 @@
+// Components
+import House from "./House";
+
 // Components - Material UI
 import { Box, Container, Typography, styled } from "@mui/material";
+
 import { properties } from "../properties";
-import House from "./House";
 
 const Properties = () => {
 	const PropertiesBox = styled(Box)(({ theme }) => ({
@@ -29,7 +32,7 @@ const Properties = () => {
 						Featured Properties
 					</Typography>
 					<Typography sx={{ color: "#5S6473", fontSize: "16px", mt: 1 }}>
-						Everyhthing you need to know when looking for a new home!
+						Everything you need to know when looking for a new home!
 					</Typography>
 				</PropertiesTextBox>
 
