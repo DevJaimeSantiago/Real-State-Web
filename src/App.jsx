@@ -4,6 +4,8 @@ import Companies from "./Components/Companies";
 import Guide from "./Components/Guide";
 import Properties from "./Components/Properties";
 import Details from "./Components/Details";
+import GetStarted from "./Components/GetStarted";
+import Footer from "./Components/Footer";
 
 const App = () => {
 	return (
@@ -13,6 +15,8 @@ const App = () => {
 			<Guide />
 			<Properties />
 			<Details />
+			<GetStarted />
+			<Footer />
 		</>
 	);
 };
