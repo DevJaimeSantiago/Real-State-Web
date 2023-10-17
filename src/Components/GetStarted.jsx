@@ -2,10 +2,10 @@
 import { Box, Container, Typography, styled } from "@mui/material";
 
 // Components
+import CustomButton from "./CustomButton";
 
 // Images
 import homeIllustration from "../media/illustration.png";
-import CustomButton from "./CustomButton";
 
 const GetStarted = () => {
 	const CustomContainer = styled(Container)(({ theme }) => ({
